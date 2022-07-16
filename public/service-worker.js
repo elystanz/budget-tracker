@@ -28,3 +28,40 @@ self.addEventListener('activate', (event) => {
     )
     .then(() => self.clients.claim());
 });
+
+self.addEventListener('fetch', event => {
+    if (
+        event.request.method != 'GET' || !event.request.url.startsWith(self.location.origin)
+    ) {
+        event.respondWith(fetch(event.request));
+        return;
+    } if (event.request.url.includes('/api/transaction')) {
+        event.respondWith(
+            caches.open(RUNTIME_CACHE).then(cache => 
+                fetch(event.request)
+                .then(response => {
+                    cache.put(event.request, response.clone());
+                    return response;
+                })
+                .cache(() => caches.match(event.request)))
+        );
+        return;
+    }
+
+    event.respondWith(
+        caches.match(event.request)
+        .then(cachedResponse => {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+
+            return caches
+                .open(RUNTIME_CACHE)
+                .then(cache =>
+                    fetch(event.request).then(response =>
+                        cache.put(event.request, response.clone()).then(() => response)
+                    )
+                );
+        })
+    );
+});
