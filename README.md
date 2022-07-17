@@ -11,11 +11,10 @@
 ## <a id="introduction">Introduction</a>
 Budget Tracker is a great and easy way to keep track of your daily transactions. Log today's paycheck, subtract the coffee price from the afternoon, and keep an eye on what your friends and family may owe you.
 
-
 ## <a id="application">Application</a>
 Here is the application in use:
 
-
+![budgettrackerdemo](https://user-images.githubusercontent.com/95983252/179381846-6c5ce7e1-60a9-4782-9bcd-75643cacdc7d.gif)
 
 ## <a id="roadmap">Roadmap</a>
 Future development of the Budget Tracker includes being able to assign dates to transactions, therefore keeping a more accurate log of your payments and earnings.
