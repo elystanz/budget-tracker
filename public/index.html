@@ -10,27 +10,28 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <title>Budget Tracker</title>
+  <title>budget tracker</title>
 </head>
 <body>
+  <header class="banner">budget tracker</header>
   <div class="wrapper">
     <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
+      <div class="total">you current total is: $<span id="total">0</span></div>
     </div>
 
     <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+      <input type="text" id="t-name" placeholder="name of transaction" />
+      <input type="number" min="0" id="t-amount" placeholder="transaction amount" />
+      <button id="add-btn"><i class="fa fa-plus buttons"></i> add funds</button>
+      <button id="sub-btn"><i class="fa fa-minus"></i> subtract funds</button>
       <p class="error"></p>
     </div>
 
     <div class="transactions">
       <table>
         <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
+          <th>transaction</th>
+          <th>amount</th>
         </thead>
         <tbody id="tbody">
           

@@ -1,9 +1,20 @@
+:root {
+  --primary: #F1DEDE;
+  --secondary: #D496A7;
+  --tertiary: #5D576B;
+  --quaternary: #6CD4FF;
+  --quinary: #FE938C;
+  --senary: #AE4762;
+}
+
 * {
-  background-color: blue;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 body {
   font-size: 120%;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
 }
 
 button, input {
@@ -25,8 +36,17 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.banner {
+  background-color: var(--senary);
+  font-size: 30px;
+  margin-top: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
 .error {
-  color: red;
+  color:var(--senary);
 }
 
 .wrapper {
@@ -36,8 +56,10 @@ tr:nth-child(even) {
 }
 
 .total {
-  font-size: 150%;
-  text-decoration: underline;
+  margin: 15px;
+  font-size: 135%;
+  text-decoration: none;
+  font-style: italic;
 }
 
 .form {
