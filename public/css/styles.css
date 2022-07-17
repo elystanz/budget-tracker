@@ -1,6 +1,9 @@
+* {
+  background-color: blue;
+}
 body {
   font-size: 120%;
-  font-family: Arial;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 button, input {
